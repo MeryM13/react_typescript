@@ -1,25 +1,25 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Square from "./components/Square";
+import OnlyEven from "./components/OnlyEven";
+import Temperature from "./components/Temperature";
+import Timer from "./components/Timer";
+import BackwardsTimer from "./components/BackwardsTimer";
+import PrimesGen from "./components/PrimesGen";
+import SelectCity from "./components/SelectBoxCities";
+import Calculator from "./components/Calculator";
+import BasesCalculator from "./components/BasesCalculator";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className="App">
+        <header className="App-header">
+          <SelectCity/>
+          <Calculator/>
+          <BasesCalculator/>
+        </header>
+      </div>
   );
 }
 
