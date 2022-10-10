@@ -10,14 +10,13 @@ import PrimesGen from "./components/PrimesGen";
 import SelectCity from "./components/SelectBoxCities";
 import Calculator from "./components/Calculator";
 import BasesCalculator from "./components/BasesCalculator";
+import BitNumber from "./components/BitNumber";
 
 function App() {
   return (
       <div className="App">
         <header className="App-header">
-          <SelectCity/>
-          <Calculator/>
-          <BasesCalculator/>
+            <BitNumber/>
         </header>
       </div>
   );
