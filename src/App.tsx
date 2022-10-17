@@ -11,12 +11,14 @@ import SelectCity from "./components/SelectBoxCities";
 import Calculator from "./components/Calculator";
 import BasesCalculator from "./components/BasesCalculator";
 import BitNumber from "./components/BitNumber";
+import LoginForm from "./components/LoginForm";
+import BetterLoginForm from "./components/BetterLoginForm";
 
 function App() {
   return (
       <div className="App">
         <header className="App-header">
-            <BitNumber/>
+            <BetterLoginForm/>
         </header>
       </div>
   );
