@@ -1,81 +1,63 @@
-import React, {FormEvent} from "react";
-import {useState} from "react";
+import React from "react";
+import { Form as FinalForm, Field } from 'react-final-form'
+import {Link, Route, Routes} from "react-router-dom";
+import RegistrationForm from "./RegistrationForm";
+import DefaultForm from "./DefaultForm";
 
 export default function LoginForm() {
-    const [login, setLogin] = useState("");
-    const [loginError, setLoginError] = useState("");
-    const [password, setPassword] = useState("");
-    const [passwordError, setPasswordError] = useState("");
-    const [repeat, setRepeat] = useState("");
-    const [repeatError,setRepeatError] = useState("");
 
-    const isValid = (): boolean => {
-        let result = true;
-        setLoginError("");
-        setPasswordError("");
-        setRepeatError("");
-        if (login.length === 0) {
-            setLoginError("Логин не может быть пустым.");
-            result = false;
-        }
-
-        if (!/([a-z0-9]{6,20})/.test(login)) {
-            setLoginError("Логин должен содержать от 6 до 20 символов латинского алфавита и цифры.");
-            result = false;
-        }
-
-        if (password.length === 0) {
-            setPasswordError("Пароль не может быть пустым.");
-            result = false;
-        }
-
-        if (repeat.length === 0) {
-            setRepeatError("Повтор пароля не может быть пустым.");
-            result = false;
-        }
-
-        if (password !== repeat) {
-            setRepeatError("Пароль и повтор пароля должны совпадать.");
-            result = false;
-        }
-
-        return result;
+    type FormValues = {
+        login: string;
+        password: string;
     };
 
-    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-        if (isValid()) {
-            // отправка данных на сервер
+    const required = (value: string) => (value ? undefined : "Это поле не может быть пустым")
+    const validLogin = (value: string) => {
+        if (!/([a-z0-9]{6,20})/.test(value)) {
+            return "Логин должен содержать от 6 до 20 символов латинского алфавита и цифры.";
         }
+        return undefined;
+    };
+    const composeValidators = (...validators: any[]) => (value: string, allValues: any) =>
+        validators.reduce((error, validator) => error || validator(value, allValues), undefined);
+
+
+    const onSubmit = (values: FormValues) => {
+        // отправка данных на сервер
+        console.log(values);
     };
 
     return <>
-        <form onSubmit={handleSubmit}>
-            <div>
-                <label>Логин:
-                    <input value={login} onChange={e => setLogin(e.target.value)}/>
-                </label>
-                {loginError && <div className="error">
-                    {loginError}
-                </div>}
-            </div>
-            <div>
-                <label>Пароль:
-                    <input type="password" value={password} onChange={e => setPassword(e.target.value)}/>
-                </label>
-                {passwordError && <div className="error">
-                    {passwordError}
-                </div>}
-            </div>
-            <div>
-                <label>Повторите пароль:
-                    <input type="password" value={repeat} onChange={e => setRepeat(e.target.value)}/>
-                </label>
-                {repeatError && <div className="error">
-                    {repeatError}
-                </div>}
-            </div>
-            <button type="submit">Войти</button>
-        </form>
+        <Link to="/DefaultForm">Home</Link>
+        <FinalForm
+            onSubmit={onSubmit}
+            render={({handleSubmit}) => (
+                <form onSubmit={handleSubmit}>
+                    <Field name="login" validate={composeValidators(required, validLogin)}>
+                        {({input, meta}) => (
+                            <div>
+                                <label>Логин:
+                                    <input type="text" {...input} placeholder="Логин"/>
+                                </label>
+                                {meta.touched && meta.error && <div className="error">{meta.error}</div>}
+                            </div>
+                        )}
+                    </Field>
+                    <Field name="password" validate={composeValidators(required)}>
+                        {({input, meta}) => (
+                            <div>
+                                <label>Пароль:
+                                    <input type="password" {...input} placeholder="Пароль"/>
+                                </label>
+                                {meta.touched && meta.error && <div className="error">{meta.error}</div>}
+                            </div>
+                        )}
+                    </Field>
+                    <button type="submit">Войти</button>
+                </form>
+            )}>
+        </FinalForm>
+        <div>Dont have an account?</div>
+        <Link to="/RegistrationForm">Register</Link>
     </>;
 }

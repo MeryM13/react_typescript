@@ -1,7 +1,10 @@
 import React from "react";
 import { Form as FinalForm, Field } from 'react-final-form'
+import {Link, Route, Routes} from "react-router-dom";
+import DefaultForm from "./DefaultForm";
+import LoginForm from "./LoginForm";
 
-export default function BetterLoginForm() {
+export default function RegistrationForm() {
 
     type FormValues = {
         login: string;
@@ -28,6 +31,7 @@ export default function BetterLoginForm() {
     };
 
     return <>
+        <Link to="/DefaultForm">Home</Link>
         <FinalForm
             onSubmit={onSubmit}
             render={({handleSubmit}) => (
@@ -66,5 +70,7 @@ export default function BetterLoginForm() {
                 </form>
             )}>
         </FinalForm>
+        <div>Already have an account?</div>
+        <Link to="/LoginForm">Login</Link>
     </>;
 }
