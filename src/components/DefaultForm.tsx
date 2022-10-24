@@ -1,7 +1,5 @@
 import React from "react";
-import {Link, Route, Routes} from "react-router-dom";
-import LoginForm from "./LoginForm";
-import RegistrationForm from "./RegistrationForm";
+import {Link} from "react-router-dom";
 
 export default function DefaultForm() {
     return <>
@@ -9,5 +7,7 @@ export default function DefaultForm() {
         <Link to="/LoginForm">Login</Link>
         <div/>
         <Link to="/RegistrationForm">Registration</Link>
+        <div/>
+        <Link to="/QueryForm">Query</Link>
     </>
 }

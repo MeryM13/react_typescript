@@ -1,8 +1,7 @@
 import React from "react";
 import { Form as FinalForm, Field } from 'react-final-form'
-import {Link, Route, Routes} from "react-router-dom";
-import DefaultForm from "./DefaultForm";
-import LoginForm from "./LoginForm";
+import {Link} from "react-router-dom";
+
 
 export default function RegistrationForm() {
 
