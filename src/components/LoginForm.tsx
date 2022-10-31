@@ -2,6 +2,7 @@ import React from "react";
 import { Form as FinalForm, Field } from 'react-final-form'
 import {Link} from "react-router-dom";
 
+//create a connection to https://github.com/dmitryweiner/mini-chat-server for Login and Registration Forms
 
 export default function LoginForm() {
 

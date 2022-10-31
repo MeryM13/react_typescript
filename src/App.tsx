@@ -1,20 +1,10 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Square from "./components/Square";
-import OnlyEven from "./components/OnlyEven";
-import Temperature from "./components/Temperature";
-import Timer from "./components/Timer";
-import BackwardsTimer from "./components/BackwardsTimer";
-import PrimesGen from "./components/PrimesGen";
-import SelectCity from "./components/SelectBoxCities";
-import Calculator from "./components/Calculator";
-import BasesCalculator from "./components/BasesCalculator";
-import BitNumber from "./components/BitNumber";
 import RegistrationForm from "./components/RegistrationForm";
-import {Route, Routes, Link} from 'react-router-dom';
+import {Route, Routes, Link, Navigate} from 'react-router-dom';
 import LoginForm from "./components/LoginForm";
 import DefaultForm from "./components/DefaultForm";
+import QueryForm from "./components/QueryForm";
 
 function App() {
     return (
@@ -24,7 +14,8 @@ function App() {
                     <Route path='/LoginForm' element={<LoginForm/>}/>
                     <Route path='/RegistrationForm' element={<RegistrationForm/>}/>
                     <Route path='/DefaultForm' element={<DefaultForm/>}/>
-                    <Route path='/QueryForm' element={<DefaultForm/>}/>
+                    <Route path='/QueryForm' element={<QueryForm/>}/>
+                    <Route path="*" element={<Navigate to="/DefaultForm" replace />} />
                 </Routes>
             </header>
         </div>
@@ -32,3 +23,5 @@ function App() {
 }
 
 export default App;
+
+
