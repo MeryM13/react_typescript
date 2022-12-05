@@ -1,6 +1,7 @@
 import React from "react";
 import { Form as FinalForm, Field } from 'react-final-form'
 import {Link} from "react-router-dom";
+import {composeValidators, passwordRepeated, required, validLogin} from "../validators";
 
 
 export default function RegistrationForm() {
@@ -10,19 +11,6 @@ export default function RegistrationForm() {
         password: string;
         repeat: string;
     };
-
-    const required = (value: string) => (value ? undefined : "Это поле не может быть пустым")
-    const validLogin = (value: string) => {
-        if (!/([a-z0-9]{6,20})/.test(value)) {
-            return "Логин должен содержать от 6 до 20 символов латинского алфавита и цифры.";
-        }
-        return undefined;
-    };
-    const passwordRepeated = (value: string, allValues: any) =>
-        (allValues.password === allValues.repeat ? undefined : "Пароль и повтор пароля должны совпадать.");
-    const composeValidators = (...validators: any[]) => (value: string, allValues: any) =>
-        validators.reduce((error, validator) => error || validator(value, allValues), undefined);
-
 
     const onSubmit = (values: FormValues) => {
         // отправка данных на сервер

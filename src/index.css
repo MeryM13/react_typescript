@@ -30,3 +30,18 @@ code {
 {
   color: red;
 }
+
+.header
+{
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+  padding: 1em;
+  margin-bottom: 2em;
+  font-size: 24px;
+  font-weight: bold;
+  top: 0;
+  height: 20%;
+  background-color: cadetblue;
+}
