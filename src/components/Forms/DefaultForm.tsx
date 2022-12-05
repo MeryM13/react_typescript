@@ -10,5 +10,7 @@ export default function DefaultForm() {
         <Link to="/RegistrationForm">Зарегистрироваться</Link>
         <div/>
         <Link to="/TopicsForm/0">Продолжить анонимно</Link>
+        <div/>
+        <Link to="/Control">Контрольная</Link>
     </>
 }

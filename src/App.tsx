@@ -8,11 +8,11 @@ import Header from "./components/elements/header";
 import ProfilePage from "./components/Forms/ProfilePage";
 import TopicsForm from "./components/Forms/TopicsForm";
 import ChatForm from "./components/Forms/ChatForm";
+import PinControl from "./components/previous labs/PinControl";
 
 function App() {
     return (
         <div className="App">
-            <Header userId={0}></Header>
                 <Routes>
                     <Route path='/LoginForm' element={<LoginForm/>}/>
                     <Route path='/RegistrationForm' element={<RegistrationForm/>}/>
@@ -20,6 +20,7 @@ function App() {
                     <Route path='/TopicsForm/:id' element={<TopicsForm/>}/>
                     <Route path='/Profile/:id' element={<ProfilePage/>}/>
                     <Route path='/Topic/:id' element={<ChatForm/>}/>
+                    <Route path='/Control' element={<PinControl/>}/>
                     <Route path="*" element={<Navigate to="/DefaultForm" replace />} />
                 </Routes>
         </div>
