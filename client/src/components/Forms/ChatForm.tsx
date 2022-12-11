@@ -1,23 +1,21 @@
-import React from "react";
+import React, {useState} from "react";
 import { Form as FinalForm, Field } from 'react-final-form'
-import {Link} from "react-router-dom";
-import {composeValidators, required, validLogin} from "../validators";
+import {Link, useParams} from "react-router-dom";
+import {composeValidators, required, validLogin} from "../services/validators";
+import {GetChatById} from "../../types/Chat";
 
-//create a connection to https://github.com/dmitryweiner/mini-chat-server for Login and Registration Forms
+export default function ChatForm() {
+    const {id} = useParams();
+    const chat = GetChatById(id);
+    let name = chat?.theme;
 
-export default function LoginForm() {
-
-    type FormValues = {
-        login: string;
-        password: string;
-    };
-
-    const onSubmit = (values: FormValues) => {
-        console.log(values);
+    const onSubmit = () => {
+        console.log();
     };
 
     return <>
-        <Link to="/DefaultForm">Home</Link>
+        <h2>{name}</h2>
+        <Link to="/">Home</Link>
         <FinalForm
             onSubmit={onSubmit}
             render={({handleSubmit}) => (
@@ -46,7 +44,5 @@ export default function LoginForm() {
                 </form>
             )}>
         </FinalForm>
-        <div>Dont have an account?</div>
-        <Link to="/RegistrationForm">Register</Link>
     </>;
 }

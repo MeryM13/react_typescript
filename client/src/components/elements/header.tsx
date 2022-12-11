@@ -10,8 +10,8 @@ export default function Header({userId}: headerProps) {
         return <>
             <div className="header">
                 <text>TopTopics</text>
-                <Link to="/RegistrationForm" >Register</Link>
-                <Link to="/LoginForm">Login</Link>
+                <Link to="/registration" >Register</Link>
+                <Link to="/login">Login</Link>
             </div>
         </>
     }

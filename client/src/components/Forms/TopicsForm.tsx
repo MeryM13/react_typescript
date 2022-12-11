@@ -7,7 +7,6 @@ export default function TopicsForm() {
 
     const [searchString, setSearchString] = useState<string>("");
     const [chats, setChats] = useState(ChatCollection);
-    console.log(chats);
 
     const onSubmit = () => {
     };

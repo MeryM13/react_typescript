@@ -7,6 +7,7 @@ const Layout = () => {
         <>
             <Header userId={0}/>
             <Outlet/>
+
         </>
     );
 };

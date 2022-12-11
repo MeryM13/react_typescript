@@ -9,7 +9,7 @@ type chatProps = {
 
 export default function Chat({chat}:chatProps) {
     return <div>
-        <Link to={"/Topic/"+chat.id}>{chat.id}  {chat.theme}</Link>
+        <Link to={"/topic/"+chat.id}>{chat.id}  {chat.theme}</Link>
         <div/>
         {chat.authorId} {moment(chat.createdAt).format('YYYY-MM-DD')}
     </div>

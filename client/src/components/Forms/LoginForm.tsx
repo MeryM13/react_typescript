@@ -1,23 +1,19 @@
-import React, {useState} from "react";
+import React from "react";
 import { Form as FinalForm, Field } from 'react-final-form'
-import {Link, useParams} from "react-router-dom";
-import {composeValidators, required, validLogin} from "../validators";
-import {GetChatById} from "../../types/Chat";
+import {Link} from "react-router-dom";
+import {composeValidators, required, validLogin} from "../services/validators";
 
-export default function ChatForm() {
-    const {id} = useParams();
-    const chat = GetChatById(id);
-    let name = "";
-    if (chat)
-        name = chat.theme;
+export type LoginFormData = {
+    login: string;
+    password: string;
+};
 
-    const onSubmit = () => {
-        console.log();
-    };
+type LoginFormProps = {
+    onSubmit: (data: LoginFormData) => void
+}
 
+export default function LoginForm({onSubmit}:LoginFormProps) {
     return <>
-        <h2>{name}</h2>
-        <Link to="/DefaultForm">Home</Link>
         <FinalForm
             onSubmit={onSubmit}
             render={({handleSubmit}) => (

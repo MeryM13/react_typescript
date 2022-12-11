@@ -9,7 +9,8 @@ export type chat = {
 
 export function GetChatById(searchId: any) {
     console.log(searchId);
-    return ChatCollection.find(({id}) => id == searchId);
+    console.log(ChatCollection.find(({id}) => id === searchId.toString()))
+    return ChatCollection.find(({id}) => id === searchId.toString());
 }
 
 export const ChatCollection = [

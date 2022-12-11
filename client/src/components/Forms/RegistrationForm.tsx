@@ -1,24 +1,19 @@
-import React from "react";
+import React, {useState} from "react";
 import { Form as FinalForm, Field } from 'react-final-form'
-import {Link} from "react-router-dom";
-import {composeValidators, passwordRepeated, required, validLogin} from "../validators";
+import {composeValidators, passwordRepeated, required, validLogin} from "../services/validators";
 
+export type RegistrationFormData = {
+    login: string;
+    password: string;
+    repeat: string;
+};
 
-export default function RegistrationForm() {
+type RegistrationFormProps = {
+    onSubmit: (data: RegistrationFormData) => void
+}
 
-    type FormValues = {
-        login: string;
-        password: string;
-        repeat: string;
-    };
-
-    const onSubmit = (values: FormValues) => {
-        // отправка данных на сервер
-        console.log(values);
-    };
-
+export default function RegistrationForm({onSubmit}:RegistrationFormProps) {
     return <>
-        <Link to="/DefaultForm">Home</Link>
         <FinalForm
             onSubmit={onSubmit}
             render={({handleSubmit}) => (
@@ -57,7 +52,5 @@ export default function RegistrationForm() {
                 </form>
             )}>
         </FinalForm>
-        <div>Already have an account?</div>
-        <Link to="/LoginForm">Login</Link>
     </>;
 }
