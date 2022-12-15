@@ -7,61 +7,33 @@
     <bookmark url="file://$PROJECT_DIR$/src/App.tsx" line="19" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51dcaa3f-ba00-49e8-936a-9d2d2372de7b" name="Default Changelist" comment="-changed directories&#10;-added main lab functionality&#10;-types for main lab">
-      <change afterPath="$PROJECT_DIR$/client/src/App.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/Forms/DefaultForm.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/services/querys.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/views/LoginView.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/views/RegistrationView.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/client/.gitignore" afterDir="false" />
+    <list default="true" id="51dcaa3f-ba00-49e8-936a-9d2d2372de7b" name="Default Changelist" comment="-added basic server (port 3001)&#10;-refactoring">
+      <change afterPath="$PROJECT_DIR$/server/database/db.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/database/tokens.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/database/topics.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/database/users.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/errors.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/routes/auth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/routes/topic.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/routes/user.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/service.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/client/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/logo192.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/logo192.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/logo512.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/logo512.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/robots.txt" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/robots.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Forms/ChatForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Forms/ChatForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Forms/DefaultForm.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Forms/LoginForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Forms/LoginForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Forms/ProfilePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Forms/ProfilePage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Forms/RegistrationForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Forms/RegistrationForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Forms/TopicsForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Forms/TopicsForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/views/Layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/QueryForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/QueryForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/elements/chat.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/elements/chat.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/elements/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/elements/header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/elements/message.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/elements/message.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/previous labs/BackwardsTimer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/previous labs/BackwardsTimer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/previous labs/BasesCalculator.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/previous labs/BasesCalculator.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/previous labs/BitNumber.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/previous labs/BitNumber.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/previous labs/Calculator.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/previous labs/Calculator.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/previous labs/OnlyEven.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/previous labs/OnlyEven.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/previous labs/PinControl.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/previous labs/PinControl.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/previous labs/PrimesGen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/previous labs/PrimesGen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/previous labs/SelectBoxCities.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/previous labs/SelectBoxCities.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/previous labs/Square.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/previous labs/Square.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/previous labs/Temperature.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/previous labs/Temperature.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/previous labs/Timer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/previous labs/Timer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/validators.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/services/validators.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/logo.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/react-app-env.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/react-app-env.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reportWebVitals.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/reportWebVitals.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/setupTests.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/setupTests.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/Chat.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/types/Chat.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/Message.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/types/Message.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/Token.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/types/Token.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/User.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/types/User.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Forms/ChatForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Forms/ChatForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Forms/DefaultForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Forms/DefaultForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Forms/ProfilePage.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Forms/TopicsForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Forms/TopicsForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/elements/chat.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/elements/Topic.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/elements/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/elements/header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/services/querys.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/services/querys.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/services/validators.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/services/validators.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/views/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/views/Layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/views/LoginView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/views/LoginView.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/views/RegistrationView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/views/RegistrationView.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/types/Chat.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/types/Chat.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/types/User.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
     </list>
     <list id="fe5b52bb-426f-4af4-a09c-9e8ea4e145d9" name="QueryForm is fully functional New TODO in LoginForm" comment="QueryForm is fully functional New TODO in LoginForm" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,6 +46,7 @@
       <list>
         <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -172,6 +145,7 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Pavel Sharomov\\WebstormProjects\\react_typescript\\client\\node_modules\\typescript\\lib&quot;,
+    &quot;ts.rename.search.for.js.occurrences&quot;: &quot;false&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -187,12 +161,12 @@
       <recent name="C:\Users\Pavel Sharomov\WebstormProjects\react_typescript\src\components\Forms" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.npm start">
+  <component name="RunManager" selected="npm.start server">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
-    <configuration name="npm start" type="js.build_tools.npm">
-      <package-json value="$PROJECT_DIR$/package.json" />
+    <configuration name="start client" type="js.build_tools.npm" singleton="false">
+      <package-json value="$PROJECT_DIR$/client/package.json" />
       <command value="run" />
       <scripts>
         <script value="start" />
@@ -201,6 +175,21 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="start server" type="js.build_tools.npm" singleton="false">
+      <package-json value="$PROJECT_DIR$/server/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="JavaScript Debug.Debug Application" />
+      <item itemvalue="npm.start server" />
+      <item itemvalue="npm.start client" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -223,7 +212,10 @@
       <workItem from="1666597466231" duration="5212000" />
       <workItem from="1667202260862" duration="3895000" />
       <workItem from="1670145349069" duration="13972000" />
-      <workItem from="1670733369172" duration="4892000" />
+      <workItem from="1670733369172" duration="5052000" />
+      <workItem from="1670905693690" duration="66000" />
+      <workItem from="1670994793766" duration="32665000" />
+      <workItem from="1671071179468" duration="625000" />
     </task>
     <task id="LOCAL-00001" summary="a">
       <created>1664183102132</created>
@@ -274,7 +266,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667205777641</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="-added basic server (port 3001)&#10;-refactoring">
+      <created>1670740777731</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1670740777731</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -351,7 +350,8 @@
     <MESSAGE value="Added QueryForm" />
     <MESSAGE value="QueryForm is fully functional&#10;New TODO in LoginForm" />
     <MESSAGE value="QueryForm is fully functional New TODO in LoginForm" />
-    <option name="LAST_COMMIT_MESSAGE" value="QueryForm is fully functional New TODO in LoginForm" />
+    <MESSAGE value="-added basic server (port 3001)&#10;-refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="-added basic server (port 3001)&#10;-refactoring" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/App.test.tsx">

@@ -1,13 +1,12 @@
 import React from 'react';
-import Header from "./elements/header";
 import {Outlet} from "react-router-dom";
+import Header from "../elements/header";
 
 const Layout = () => {
     return (
         <>
-            <Header userId={0}/>
+            <Header/>
             <Outlet/>
-
         </>
     );
 };

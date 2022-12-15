@@ -1,30 +1,22 @@
 import React, {useState} from 'react';
 import {Link, useNavigate} from "react-router-dom";
 import RegistrationForm, {RegistrationFormData} from "../Forms/RegistrationForm";
-import {BASE_URL} from "../services/querys";
+import {API, BASE_URL} from "../services/querys";
 
 function RegistrationView() {
 
     const [result, setResult] = useState("");
     const [error, setError] = useState("");
     const navigate = useNavigate();
+
     const onSubmit = (values: RegistrationFormData) => {
         const regRequest = async () => {
+            console.log("Post request sent", values);
             setError("");
             setResult("");
             try {
-                const response = await fetch(BASE_URL + "/user", {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
-                    body: JSON.stringify(values)
-                });
-                if (response.status !== 200) {
-                    const responseData = await response.json();
-                    throw Error(responseData.message);
-                }
-                setResult("User added");
+                await API.user.register(values);
+                setResult("Пользователь успешно добавлен");
                 setTimeout(() => {
                     navigate("/login");
                 }, 2000)
@@ -35,7 +27,6 @@ function RegistrationView() {
                 }
             }
         }
-        console.log(values);
         regRequest();
     };
 

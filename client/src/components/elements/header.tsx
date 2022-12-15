@@ -1,26 +1,50 @@
-import React from "react";
-import {Link} from "react-router-dom";
+import React, {useEffect, useState} from "react";
+import {Link, useNavigate} from "react-router-dom";
+import {API} from "../services/querys";
 
-type headerProps = {
-    userId: number,
-}
+export default function Header() {
 
-export default function Header({userId}: headerProps) {
+    const [userId,setUserId] = useState(0);
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        setUserId(0);
+        const userRequest = async () => {
+            try {
+                const user = await API.user.get();
+                setUserId(user.id);
+            } catch (e) {
+            }
+        }
+        userRequest();
+    }, []);
+
+    const handleLogout = () => {
+        const logoutRequest = async () => {
+            try {
+                await API.auth.logout();
+                setUserId(0);
+                navigate("/");
+            } catch (e) {
+            }
+        };
+        logoutRequest();
+    }
+
     if (!userId) {
         return <>
             <div className="header">
-                <text>TopTopics</text>
-                <Link to="/registration" >Register</Link>
-                <Link to="/login">Login</Link>
+                TopTopics
+                <Link to="/registration" >Зарегистрироваться</Link>
+                <Link to="/login">Войти</Link>
             </div>
         </>
     }
     else {
         return <>
             <div className="header">
-                <text>TopTopics</text>
-                <Link to="/RegistrationForm" >Register</Link>
-                <Link to="/LoginForm">Login</Link>
+                TopTopics
+                <button onClick={handleLogout}>Выход</button>
             </div>
         </>
     }
